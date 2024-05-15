@@ -1,0 +1,128 @@
+.testimonial-slider {
+    position: relative;
+}
+
+.arrow-button {
+    /* background-color: #3498db;  */
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    z-index: 50;
+}
+
+.arrow-button2 {
+   
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 60px;
+}
+
+@media (max-width: 767px) {
+    
+.arrow-button {
+    /* background-color: #3498db;  */
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    z-index: 50;
+}
+
+.arrow-button2 {
+   
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    margin-left: 40px;
+}
+   
+}
+@media (min-width: 768px) {
+    
+.arrow-button {
+    /* background-color: #3498db;  */
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -40px;
+    z-index: 50;
+}
+
+.arrow-button2 {
+   
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -40px;
+    margin-left: 40px;
+}
+   
+}
+@media (min-width: 1366px) {
+    
+.arrow-button {
+    /* background-color: #3498db;  */
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    z-index: 50;
+}
+
+.arrow-button2 {
+   
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 40px;
+}
+   
+}
+@media (min-width: 1536px) {
+    
+.arrow-button {
+    /* background-color: #3498db;  */
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    z-index: 50;
+}
+
+.arrow-button2 {
+   
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 40px;
+}
+   
+}
+
+

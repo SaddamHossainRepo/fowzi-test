@@ -1,0 +1,27 @@
+.serviceCardParent {
+  background-color: #d7d7d7;
+  transition: background-color 2s;
+}
+
+
+.serviceCardParent:not(.active) {
+  background-color: #252525;
+}
+
+/* .servicesImg {
+  transition: transform 0.5s ease-in-out;
+}
+
+.leftToRightAnimation {
+  transform: translateX(100px); 
+} */
+.servicesImg {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s, transform 2s;
+}
+
+.leftToRightAnimation {
+  opacity: 1;
+  transform: scale(1.1); /* Adjust the scale factor for zoom effect */
+}

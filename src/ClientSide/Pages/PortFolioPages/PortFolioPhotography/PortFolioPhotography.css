@@ -1,0 +1,30 @@
+/* Example CSS to position dots under each card */
+.slick-dots {
+    position: absolute;
+    bottom: -40px; /* Adjust position as needed */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.slick-dots li {
+    margin: 0 4px;
+}
+
+.slick-dots li button {
+    font-size: 10px;
+    color: #000; /* Change color as needed */
+    background-color: transparent; 
+    border: 1px solid #000; /* Change border color as needed */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #fff; /* Change active dot color as needed */
+    color: transparent; /* Change active dot text color as needed */
+}

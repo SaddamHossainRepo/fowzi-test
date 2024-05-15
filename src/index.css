@@ -1,0 +1,928 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Common  Styles for all Components--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .headerLogo {
+    @apply 2xl:h-[61px] 2xl:w-[54px] 
+    xl:w-[48px] xl:h-[54.22px] 
+    lg:w-[48px] lg:h-[50px] 
+    md:w-[40px] md:h-auto
+    w-[30px] h-auto
+   
+    /* -------common style ------------ */
+    object-cover;
+  }
+
+  .leftRight {
+    @apply 2xl:px-[150px] 2xl:pt-[200px] 
+    xl:px-[80px] xl:pt-[200px]
+    lg:px-[70px] lg:pt-[150px]
+    md:px-[50px] md:pt-[100px]
+    px-[20px] pt-[100px];
+  }
+
+  .titleSubHeading {
+    @apply 2xl:text-[50px] 2xl:leading-[60px] 2xl:pb-[60px] 
+    xl:text-[40px] xl:leading-[48px] xl:pb-[44px] 
+    lg:text-[35px] lg:leading-[40px] lg:pb-[40px]
+    md:text-[30px] md:leading-[30px] md:pb-[35px]
+    text-[25px] leading-[30px] pb-[25px]
+   
+    /* -------Common Styles ------ */
+    text-white font-glaCailBold;
+  }
+
+  .cardBaseText {
+    @apply 
+    2xl:text-[30px] 2xl:leading-[51px] 
+    xl:text-[25px] xl:leading-[38.75px] 
+    lg:text-[25px] lg:leading-[30px] 
+    md:text-[20px] md:leading-[25px] 
+    text-[15px] leading-[25.5px]
+    /* leading-[20px]    */
+    /* text-[14px]  */
+    /* text-[18px]  */
+    /* ------------common styes ------------- */
+    font-glacialBase text-white;
+  }
+
+  .desktopMenu {
+    @apply 2xl:mr-[40px] 
+    xl:mr-[40px] 
+    lg:mr-[30px] 
+    md:mr-[20px]
+    
+    cursor-pointer;
+  }
+}
+
+@layer base {
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Header styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .headMenuLeftRight {
+    @apply 2xl:px-[35px] 2xl:pt-[12px] 2xl:pb-[12px] 2xl:rounded-[100px] 2xl:text-[16px] 2xl:leading-[19.18px] 
+    xl:px-[1.875rem] xl:pt-[0.625rem] xl:pb-[0.625rem] xl:rounded-[6.25rem] xl:text-[0.75rem] xl:leading-[0.899rem] 
+    lg:text-[12px] lg:px-[30px] lg:pt-[10px] lg:pb-[10px] lg:rounded-[100px] lg:leading-[14px]
+    md:text-[12px] md:px-[25px] md:pt-[8px] md:pb-[8px] md:rounded-full md:leading-[15px]
+    /*--------- common style ---------- */
+    text-white font-glacialBase bg-[#111111] flex;
+  }
+
+  .socialIcons {
+    @apply flex;
+  }
+
+  .headingBottomParent {
+    @apply 2xl:pl-[150px] 2xl:pr-[150px] xl:pl-[60px] xl:pr-[60px] px-[20px];
+  }
+
+  .headingBottomSubParent {
+    @apply xl:flex 2xl:flex xl:justify-between 2xl:justify-between justify-center items-center;
+  }
+
+  .headingPara {
+    @apply 2xl:w-[622px] 2xl:pl-[30px] 2xl:border-l-[4px] 2xl:text-[18px] 2xl:leading-[21.58px] 2xl:xl:h-full 2xl:mb-0 xl:w-[55%] xl:pl-[15px] xl:border-l-[2px] xl:text-base xl:leading-[19.18px] xl:h-full xl:mb-0 w-full h-[110px] overflow-hidden text-[14px] mb-[20px]  
+    /* ---------- common style ------------- */
+    border-white;
+  }
+
+  .mobile-menu {
+    @apply absolute top-0 left-0 bottom-0 h-[100vh] w-full opacity-0 z-50 bg-[#111111] text-white transition-opacity duration-1000 ease-in-out;
+  }
+
+  .headerLogoMobile {
+    @apply w-[30px] h-auto;
+  }
+
+  .menuParent {
+    @apply px-[20px]
+    text-[18px] leading-[45px] font-glaCailBold pt-[20px];
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------hero Section styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .heroSectionPara {
+    @apply 2xl:text-[30px] 2xl:leading-[36px] 2xl:pt-[40px] 2xl:pb-[50px] 
+    xl:text-[25px] xl:leading-[30px] xl:pt-[20px] xl:pb-[30px] 
+    lg:text-[20px] lg:leading-[25px] lg:pt-[20px] lg:pb-[30px]
+    md:text-[15px] md:leading-[20px] md:pt-[25px] md:pb-[15px]
+    
+    /*----------- common styles here ------------ */
+    text-white font-glacialBase hidden md:block lg:block xl:block 2xl:block;
+  }
+
+  .heroSectionParaMobile {
+    @apply text-[15px] leading-[18px] pt-[20px] pb-[10px] w-[60%] mx-auto
+
+    
+    /*----------- common styles here ------------ */
+    text-white font-glacialBase block  md:hidden lg:hidden xl:hidden 2xl:hidden;
+  }
+
+  .headerHireBtn {
+    @apply 2xl:py-[10px] 2xl:px-[29px] 2xl:rounded-[100px] 2xl:text-[18px] 2xl:leading-[18px] 2xl:mb-0 xl:py-[10px] xl:px-[25px] xl:rounded-full xl:text-[16px] xl:leading-[18px] xl:mb-0 text-[14px] py-[2px] px-[25px] rounded-full mb-[10px]
+    /* ------Common Styles ------ */
+    text-white border border-white font-glacialBase text-nowrap;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Our Services styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+  .serviceInfoParent {
+    @apply 2xl:w-[764px] xl:w-[568px] lg:w-[400px] md:w-[40%] 
+    /* xl:ml-[150px] */
+    /* 2xl:ml-[230px] */;
+  }
+
+  .servicesImg {
+    @apply 2xl:w-[623px] 2xl:h-[650px] 
+    xl:w-[488px] xl:h-[545px] 
+    lg:w-[400px] lg:h-[400px]
+    md:w-[320px] md:h-[350px] 
+    w-full h-[180px];
+  }
+
+  .servicesHeading {
+    @apply 2xl:text-[50px] 2xl:leading-[60px] 2xl:mt-[-10px] 
+    xl:text-[40px] xl:leading-[48px] xl:mt-[-10px] 
+    lg:text-[30px] 
+    text-[20px] mt-[-5px]
+    /* ---------Common Style ---------- */
+    text-white font-glaCailBold;
+  }
+
+  .serviceCardParent {
+    @apply 2xl:rounded-[15px] xl:rounded-[10px] rounded-[5px];
+  }
+
+  .cardheadingText {
+    @apply 2xl:text-[30px] 2xl:leading-[36px] 2xl:py-[37px]
+    xl:text-[25px] xl:leading-[30px] xl:py-[36px]
+    lg:text-[20px] lg:leading-[25px] lg:py-[30px]
+    md:text-[20px] md:leading-[25px] md:py-[20px]
+    text-[20px] py-[15px]
+    /* ---------common Style ------------ */
+    font-glaCailBold;
+  }
+
+  .servicesSubParent {
+    @apply 2xl:pl-[25.4px] xl:pl-[20px]  pl-[10px];
+  }
+
+  .servicesPara {
+    @apply 2xl:text-[18px] 2xl:leading-[12.99px] 2xl:pl-[73px] 2xl:pr-[35px] 2xl:pt-[10px] 2xl:pb-[25px] 2xl:text-left 
+    xl:text-[16px] xl:leading-[19.39px] xl:pl-[58px] xl:pr-[20px] xl:pt-[10px] xl:pb-[15px] xl:text-left 
+    lg:text-[16px] lg:leading-[19px] lg:py-[10px]
+    text-[14px] pl-[10px] pr-[10px] pt-[5px] pb-[5px] text-wrap
+    /* -----------commmon Styles ------------ */
+    font-glacialBase text-[#111111];
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------About Us styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .aboutLeftParent {
+    @apply 2xl:w-[767px] 2xl:mr-[230px] xl:w-[566px] w-[50%];
+  }
+
+  .aboutUsHeading {
+    @apply 2xl:text-[40px] 2xl:leading-[48px] xl:text-[35px] xl:leading-[42px] text-[20px]
+    /* --------Common Styles ------- */
+    font-glaCailBold text-white;
+  }
+
+  .cardAboutSubHeading {
+    @apply 2xl:text-[50px] 2xl:leading-[60px] text-white font-glaCailBold font-bold;
+  }
+
+  .AboutCardTopBottom {
+    @apply 2xl:pt-[25px] 2xl:pb-[25px] 
+    xl:pt-[20px] xl:pb-[40px] 
+
+    pt-[10] pb-[20px];
+  }
+
+  .aboutLearnMoreBtn {
+    @apply 2xl:py-[17px] 2xl:px-[57px] text-white border rounded-[100px] 2xl:text-[30px] 2xl:leading-[35.97px];
+  }
+
+  .aboutSideImg {
+    @apply 2xl:w-[623px] 2xl:h-[677px] 
+    xl:w-[480px] xl:h-[533px] 
+    lg:w-[420px] lg:h-[380px]
+    md:w-[310px] md:h-[400px];
+  }
+
+  .aboutUsLearnMore {
+    @apply 2xl:text-[18px] 2xl:leading-[18px] 2xl:py-[10px] 2xl:px-[17px] 2xl:border-[2px] 
+    xl:text-[18px] xl:leading-[18px] xl:py-[10px] xl:px-[17px] xl:border-[1px]
+    
+     text-[10px] py-[5px] px-[20px] border-[1px]
+    /* ------------Common Styles here */
+    font-glaCailBold rounded-full text-white;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------PortFolio styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .porfolioText {
+    @apply 2xl:text-[25px] 2xl:leading-[35.97px] 2xl:tracking-[7px] 2xl:w-[405px] 2xl:top-[43px]
+     xl:text-[20px] xl:leading-[24px] xl:tracking-[5px] xl:top-5 
+     lg:text-[16px]
+     md:text-[14px]
+     text-[15px] leading-[18px] tracking-[4px] top-[5px]
+
+       /* ----------Common Styles -------------- */
+     absolute text-white w-full flex justify-center  font-glacialBase;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Blog styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .blogImg {
+    @apply 2xl:w-[464px] 2xl:h-[358px] 2xl:mx-[15px] 2xl:pt-[15px] 2xl:rounded-[35px]  2xl:px-0
+    xl:w-[346px] xl:h-[267px] xl:mx-[11px] xl:pt-[11px] xl:rounded-[25px] xl:px-0 
+    lg:w-full lg:h-[207px] lg:px-[10px] lg:pt-[11px] lg:rounded-[25px] 
+    md:w-full md:h-[210px] md:px-[10px] md:pt-[11px] md:rounded-[20px] 
+    h-[180px] w-full object-cover px-[5px] pt-[5px] rounded-[15px];
+  }
+
+  .blogUserTitle {
+    @apply 2xl:text-[15px] 2xl:leading-[18px] xl:text-[12px] xl:leading-[15px] text-[14px]
+    /* ---------Common Styles ---------- */
+    font-glaCailBold font-bold text-white;
+  }
+
+  .blogDate {
+    @apply 2xl:text-[10px] 2xl:leading-[12px] xl:text-[8px] xl:leading-[9.69px] text-[8px]
+    /* ------Common Styles ------- */
+    text-white font-glacialBase;
+  }
+
+  .blogHeading {
+    @apply 2xl:text-[30px] 2xl:leading-[36px] 2xl:px-[15px] xl:text-[25px] xl:leading-[30px] xl:py-[11px] xl:px-[11px] lg:text-[30px] lg:leading-[25px] md:text-[25px] md:leading-[25px] text-[15px] leading-[18px] px-[5px]
+    /* ---------common Styles ------------- */
+    font-glaCailBold text-white;
+  }
+
+  .blogPara {
+    @apply 2xl:text-[20px] 2xl:leading-[30px] 2xl:pt-[15px] 2xl:pb-[25px] 2xl:px-[15px] xl:text-[15px] xl:leading-[22.5px] xl:px-[11px] xl:pt-[10px] xl:pb-[20px] md:text-[15px] md:leading-[22.5px]  text-[10px] leading-[17px] px-[5px] pt-[5px] pb-[10px]
+    /* ---------common Styles ------------- */
+    font-glacialBase text-white;
+  }
+
+  .intactions {
+    @apply 2xl:text-[12px] 2xl:leading-[14.39px] xl:text-[8px] xl:leading-[9.60px] text-[10px]
+    /* ---------common Styles ------------- */
+    font-glacialBase;
+  }
+
+  .blogSeeMore {
+    @apply 2xl:text-[25px] 2xl:leading-[30px] 2xl:pt-[25px] 2xl:ml-0 xl:text-[18px] xl:leading-[24px] xl:pt-[15px] xl:ml-0 text-[10px] ml-[5px]
+    /*  ---------common Styles ------------- */
+    text-white font-glacialBase border-b border-spacing-1;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Call To Actions  styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .ctaHeading {
+    @apply 2xl:text-[38px] 2xl:leading-[46px] 2xl:pb-[25px]  2xl:py-0
+    
+    xl:text-[33px] xl:leading-[42px] xl:pb-[15px] xl:py-0
+    lg:pt-0
+    md:pt-0
+
+    text-[20px] leading-[25px] pt-[15px] pb-[15px] 
+    /*  ---------common Styles ------------- */
+    font-glaCailBold;
+  }
+
+  .ctaPara {
+    @apply 2xl:text-[18px] 2xl:leading-[22px] 
+    xl:text-[16px] xl:leading-[19.19px]
+    text-[14px] leading-[16px] 
+    /*  ---------common Styles ------------- */
+    font-glacialBase  ;
+  }
+
+  .ctaBtnParent {
+    @apply py-[20px];
+  }
+
+  .ctaBtn {
+    @apply 2xl:text-[20px] 2xl:px-[25px] 2xl:py-[10px] 
+    xl:text-[18px] xl:px-[15px] xl:py-[10px]
+
+    text-[16px] leading-[19px] py-[10px] px-[20px]
+    /*  ---------common Styles ------------- */
+    font-glacialBase text-black rounded-full bg-[#D9D9D9];
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Footer styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .footerHeading {
+    @apply 2xl:text-[25px] 2xl:leading-[25px] 2xl:pb-[15px] xl:text-[20px] xl:leading-[20px] xl:pb-[10px]
+    /*  ---------common Styles ------------- */
+    font-glaCailBold;
+  }
+
+  .footerListItems {
+    @apply xl:text-[18px] xl:leading-[19.58px] xl:pt-[10px] 2xl:text-[20px] 2xl:leading-[20px] 2xl:pt-[10px]
+    /*  ---------common Styles ------------- */
+    font-glacialBase cursor-pointer;
+  }
+
+  .footerEmailPhone {
+    @apply 2xl:text-[25px] 2xl:leading-[30px] xl:text-[20px] xl:leading-[24px] text-[12px]
+    /*  ---------common Styles ------------- */
+    font-glacialBase;
+  }
+
+  .inputTitle {
+    @apply 2xl:text-[25px] 2xl:leading-[30px] 2xl:mb-[15px] xl:text-[20px] xl:leading-[24px] xl:mb-[10.51px] text-[13px] mb-[2px]
+    /*  ---------common Styles ------------- */
+    font-glacialBase text-white;
+  }
+
+  .boxSpace {
+    @apply mb-[10px] xl:mb-0 2xl:mb-0;
+  }
+
+  .inputFeild {
+    @apply 2xl:w-[420px] 2xl:h-[60px] 2xl:rounded-[5px] 2xl:text-[18px] 2xl:pl-[30px] xl:w-[341px] xl:h-[40px] xl:rounded-[3px] xl:text-[14px] xl:pl-[20px]
+    /*  ---------common Styles ------------- */
+    text-gray-300 outline-none bg-transparent border border-white focus:border-white;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Testimonial  Styles --------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .testHeading {
+    @apply 2xl:text-[30px] 2xl:leading-[25px] xl:text-[25px] xl:leading-[25px] text-[15px]
+    /* ---------Common Styles ------------- */
+    font-glaCailBold text-white;
+  }
+
+  .testSubHeading {
+    @apply 2xl:text-[15px] 2xl:leading-[17.99px] xl:text-[12px] xl:leading-[14.39px] text-[10px]
+    /* --------Commmon Styles ------- */
+    text-white font-glacialBase;
+  }
+
+  /* -----------------------------About Us Page -------------------------------------------------- */
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------About us page  Styles --------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .headerHireUsBtn {
+    @apply 2xl:text-[18px] 2xl:leading-[18px] 2xl:py-[10px] 2xl:px-[29px] xl:text-[18px] xl:leading-[18px] xl:py-[10px] xl:px-[25px]
+    /* -----------Common Styles ----------- */
+    text-white border-[2px] rounded-[100px] font-glacialBase;
+  }
+
+  .pageTitle {
+    @apply font-glacialBase 2xl:pb-[200px] xl:pb-[200px] lg:pb-[150px] md:pb-[100px] pb-[100px];
+  }
+
+  .aboutUsText {
+    @apply 2xl:text-[32px] 2xl:leading-[35.6px] 2xl:pt-[15px] 2xl:pb-[35px] 
+    xl:text-[26px] xl:leading-[35.6px] xl:pt-[10px] xl:pb-[30px]
+    lg:text-[26px] lg:leading-[30px] lg:pt-[10px] lg:pb-[30px]
+    md:text-[20px] md:leading-[25px] md:pt-[10px] md:pb-[20px]
+    text-[20px] leading-[25px] pt-[10px] pb-[20px]
+    /* -----------Common Styles ----------- */
+    font-glacialBase;
+  }
+
+  .aboutParaHeading {
+    @apply 2xl:text-[40px] 2xl:leading-[48px] 
+    xl:text-[35px] xl:leading-[40px]
+    lg:text-[30px] lg:leading-[30px]
+    md:text-[25px] md:leading-[19.18px]
+    text-[16px] leading-[19.18px]
+    /* -------------common Styles ------------ */
+    font-glaCailBold;
+  }
+
+  .aboutParent {
+    @apply 2xl:py-[30px] 2xl:px-[30px]  
+    xl:py-[20px] xl:px-[25px]
+    lg:py-[20px] lg:px-[15px]
+    md:py-[20px] md:px-[15px]
+    py-[15px] px-[10px]
+    /*  -------------common Styles ------------ */
+    flex  w-full justify-between;
+  }
+
+  .aboutImgparent {
+    @apply 2xl:h-[420px] xl:h-[390px] lg:h-[350px] md:h-[400px];
+  }
+
+  .aboutChildParent {
+    @apply bg-[#D9D9D9] 
+    2xl:w-[333px] 2xl:rounded-[20px] 
+    xl:rounded-[10px] xl:w-[228px]
+    lg:rounded-[10px] lg:w-[48%]
+    md:rounded-[10px] md:w-[48%]
+    rounded-[5px] w-[48%]
+    flex justify-between;
+  }
+
+  .childHeading {
+    @apply 2xl:text-[25px] 2xl:leading-[30px] font-glaCailBold text-black;
+  }
+
+  .childText {
+    @apply 2xl:text-[18px] 2xl:leading-[21.58px] font-glacialBase text-black 2xl:pt-[5px];
+  }
+
+  .childContent {
+    @apply 2xl:pt-[15px] 2xl:pb-[15px] 2xl:pl-[15px] 2xl:pr-[15px] 
+    xl:pl-[15px] xl:pt-[11px] xl:pb-[11px] xl:pr-[15px]
+    lg:pl-[15px] lg:pt-[11px] lg:pb-[11px] lg:pr-[15px]
+    md:pl-[10px] md:pt-[8px] md:pb-[8px] md:pr-[10px]
+    pl-[10px] pt-[8px] pb-[8px] pr-[10px];
+  }
+
+  .aboutHiddenItems {
+    @apply hidden 2xl:block xl:block;
+  }
+  .aboutShowItemsMobile {
+    @apply block 2xl:hidden xl:hidden;
+  }
+  .aboutCommonItems {
+    @apply block lg:hidden xl:hidden 2xl:hidden;
+  }
+
+  .titleHiddenMobile {
+    @apply hidden md:block lg:block xl:block 2xl:block;
+  }
+  .titleHiddenFromLarge {
+    @apply block md:hidden lg:hidden xl:hidden 2xl:hidden;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------About us Our Team  Styles --------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .teamHeading {
+    @apply 2xl:text-[25px] 2xl:leading-[25px] 
+    xl:text-[20px] xl:leading-[20px]
+    lg:text-[20px] lg:leading-[20px]
+    md:text-[18px] md:leading-[20px]
+     text-[16px] leading-[18.19px]
+    /* --------------Common Styles -------------- */
+    font-glaCailBold text-white;
+  }
+
+  .teamSubHeading {
+    @apply 2xl:text-[15px] 2xl:leading-[17.99px] 2xl:py-[10px] 
+    xl:text-[12px] xl:leading-[12px] xl:pt-[5px] xl:pb-[10px] 
+    lg:text-[12px] lg:leading-[12px] lg:pt-[5px] lg:pb-[10px] 
+    md:text-[12px] md:leading-[12px] md:pt-[5px] md:pb-[10px] 
+    text-[10px] pb-[5px]
+    /* --------------Common Styles -------------- */
+    font-glacialBase text-white;
+  }
+
+  .teamImgThree {
+    @apply 2xl:h-[450px]
+    xl:h-[336px]
+    lg:h-[320px]
+    md:h-[300px]
+    h-[250px];
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Portfolio   Styles --------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .portfolioMiddleText {
+    @apply 2xl:text-[40px] 2xl:leading-[47.96px] 2xl:py-[32px] xl:text-[30px] xl:leading-[35.97px] xl:py-[10px]
+    /* --------------Common Styles -------------- */
+    bg-[#d7d7d7] bg-opacity-30 w-full text-center text-white font-glacialBase;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------VideoGraphy Details  Styles --------------------- */
+  /* ----------------------------------------------------------------------------------- */
+  .videoGraphyPara {
+    @apply 2xl:text-[30px] 2xl:leading-[51px]   2xl:pt-[24px]  
+    xl:text-[25px] xl:leading-[38.75px]   xl:mt-[15px]    
+    lg:text-[25px] lg:leading-[30px]  lg:mt-[15px]
+    md:text-[20px] md:leading-[25px] md:mt-[15px]
+    text-[15px] leading-[25.5px] mt-[15px]
+    text-white font-glacialBase;
+  }
+  .videographyImgParent {
+    @apply 2xl:w-[50%] 2xl:h-[700px]
+    xl:w-[45%] xl:h-[411px]
+    lg:w-[45%] lg:h-[300px]
+    md:w-[53%] md:h-[250px]
+    /* --------------Common Styles -------------- */
+    object-cover;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------Branding Page  Styles --------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .brandigParent {
+    @apply 2xl:px-[150px] 2xl:pt-[50px] 
+    xl:px-[80px] xl:pt-[40px]
+    lg:px-[70px] lg:pt-[40px]
+    md:px-[50px] md:pt-[30px]
+    px-[20px] pt-[30px]
+    /* --------------Common Styles -------------- */
+    text-white;
+  }
+
+  .brandingParaText {
+    @apply 2xl:text-[30px] 2xl:leading-[51px]  2xl:pb-[50px]  2xl:pt-0
+    xl:text-[25px] xl:leading-[38.75px] xl:pb-[40px] xl:pt-0
+    lg:text-[25px] lg:leading-[30px] lg:pb-[30px] lg:pt-0
+    md:text-[20px] md:leading-[25px] md:pb-[20px] md:pt-0
+    text-[15px] leading-[25.5px] pb-[20px] pt-[20px]
+
+     /* --------------Common Styles -------------- */
+     text-white font-glacialBase  ;
+  }
+
+  .barndingListItems {
+    @apply 2xl:text-[22px] 2xl:leading-[25px] 2xl:space-y-[40px]
+    xl:text-[18px] xl:leading-[21.6px] xl:space-y-[25px] 
+    lg:text-[18px] lg:leading-[21px] lg:space-y-[25px]
+    md:text-[18px] md:leading-[21px] md:space-y-[20px]
+    
+
+    /* --------------Common Styles -------------- */
+    text-white font-glaCailBold;
+  }
+  .gridClass {
+    @apply 2xl:text-[22px] 2xl:leading-[25px] 2xl:space-y-[40px]
+    xl:text-[18px] xl:leading-[21.6px] xl:space-y-[25px] 
+    lg:text-[18px] lg:leading-[21px] lg:space-y-[25px]
+
+    /* --------------Common Styles -------------- */
+    text-white font-glaCailBold
+    grid grid-cols-3;
+  }
+
+  .brandingImgParent {
+    @apply 2xl:w-[45%] 2xl:h-[750px]
+    xl:w-[45%] xl:h-[511px]
+    lg:w-[45%] lg:h-[350px]
+    md:w-[53%] md:h-[350px]
+    /* --------------Common Styles -------------- */
+    object-cover;
+  }
+
+  /* ========================================================================================================= */
+  /* ========================================================================================================= */
+
+  /* -----------------------------------------------------------------------------------*/
+  /* ----------------------Branding/Our Process Section Page  Styles -------------------*/
+  /* -----------------------------------------------------------------------------------*/
+
+  .processParent {
+    @apply 2xl:grid-cols-3 2xl:gap-x-[150px] 2xl:gap-y-[80px]
+  xl:grid-cols-3  xl:gap-x-[120px] xl:gap-y-[50px]
+  lg:grid-cols-2 lg:gap-x-[80px] lg:gap-y-[40px]
+  md:grid-cols-2 md:gap-x-[50px] md:gap-y-[40px]
+  gap-y-[25px]
+
+  /* --------------Common Styles -------------- */
+  grid;
+  }
+
+  .brandingNumberParent {
+    @apply 2xl:gap-[35px]
+  xl:gap-[25px] 
+  lg:gap-[20px]
+  md:gap-[15px]
+  gap-[10px] 
+  flex items-center
+  
+  /* --------------Common Styles -------------- */;
+  }
+
+  .brandingNumber {
+    @apply 2xl:w-[60px] 2xl:h-[60px] 2xl:rounded-full 2xl:text-[25px] 2xl:leading-[25px]
+    xl:w-[50px] xl:h-[50px] xl:rounded-[100%] xl:text-[20px] xl:leading-[24px] 
+    lg:w-[40px] lg:h-[40px] lg:rounded-full lg:text-[18px] lg:leading-[21px]
+    md:w-[30px] md:h-[30px] md:rounded-full md:text-[18px] md:leading-[21px]
+    w-[30px] h-[30px] rounded-full text-[18px] leading-[21px]
+
+
+ 
+    /* --------------Common Styles -------------- */
+    bg-[#D9D9D9] flex justify-center items-center text-[#111111] font-glaCailBold;
+  }
+
+  .processHeading {
+    @apply 2xl:text-[30px] 2xl:leading-[30px] 
+  xl:text-[25px] xl:leading-[24.02px] 
+  lg:text-[22px] lg:leading-[22px] 
+  md:text-[22px] md:leading-[22px] 
+  text-[20px] leading-[20px] 
+
+  /* --------------Common Styles -------------- */
+  text-white font-glaCailBold;
+  }
+
+  .processPara {
+    @apply 2xl:text-[30px] 2xl:leading-[51px]
+  xl:text-[25px] xl:leading-[38.75px] 
+  lg:text-[25px] lg:leading-[30px] 
+  md:text-[20px] md:leading-[25px] 
+  text-[15px] leading-[25.5px]
+
+
+  /* --------------Common Styles -------------- */
+   font-glacialBase;
+  }
+
+  /* -----------------------------------------------------------------------------------*/
+  /* ----------------------Branding/Our work Section Page  Styles -------------------*/
+  /* -----------------------------------------------------------------------------------*/
+
+  .ourWorkParent {
+    @apply 2xl:grid-cols-4 2xl:gap-x-[50px]
+    xl:grid-cols-4 xl:gap-x-[37px]
+    lg:grid-cols-4 lg:gap-x-[30px]
+    md:grid-cols-2 md:gap-x-[15px] md:gap-y-[25px]
+    gap-y-[25px]
+    
+  /* --------------Common Styles -------------- */
+  grid text-white;
+  }
+
+  .WorkImgOne {
+    @apply 2xl:h-[450px] 2xl:rounded-[20px]
+    xl:h-[322px]  xl:rounded-[20px]
+    lg:h-[280px] lg:rounded-[15px]
+    md:rounded-[15px]
+    rounded-[10px]
+    
+
+    /* --------------Common Styles -------------- */
+    object-cover;
+  }
+
+  .WorkImgTwo {
+    @apply 2xl:h-[600px] 2xl:rounded-[20px]
+    xl:h-[457px]  xl:rounded-[20px]
+    lg:h-[350px] lg:rounded-[15px]
+    md:rounded-[15px]
+    rounded-[10px]
+
+    /* --------------Common Styles -------------- */
+    object-cover;
+  }
+
+  .WorkImgThree {
+    @apply 2xl:h-[520px] 2xl:rounded-[20px]
+    xl:h-[390px]  xl:rounded-[20px]
+    lg:h-[320px] lg:rounded-[15px]
+    md:rounded-[15px]
+    rounded-[10px]
+    /* --------------Common Styles -------------- */
+    object-cover;
+  }
+
+  .ourWorksHead {
+    @apply 2xl:text-[30px] 2xl:leading-[30px] 2xl:pt-[25px] 2xl:pb-[15px]
+    xl:text-[25px] xl:leading-[24.02px] xl:pt-[15px] xl:pb-[8px]
+    lg:text-[22px] lg:leading-[22px]  lg:pt-[15px] lg:pb-[10px]
+    md:text-[22px] md:leading-[22px] md:pt-[15px] md:pb-[10px]
+    text-[20px] leading-[20px] pt-[15px] pb-[10px]
+    
+
+    
+    /* --------------Common Styles -------------- */
+    font-glaCailBold;
+  }
+  .ourWorksPara {
+    @apply 2xl:text-[30px] 2xl:leading-[51px]
+    xl:text-[25px] xl:leading-[38.75px] 
+    lg:text-[25px] lg:leading-[30px] text-left
+    md:text-[20px] md:leading-[25px] 
+    text-[15px] leading-[25.5px] 
+
+     /* --------------Common Styles -------------- */
+      font-glacialBase;
+  }
+
+  /* -----------------------------------------------------------------------------------*/
+  /* ----------------------web Design Page  Styles -------------------*/
+  /* -----------------------------------------------------------------------------------*/
+  .webDesignParent {
+    @apply 2xl:px-[150px] 2xl:pt-[50px] 
+    xl:px-[80px] xl:pt-[40px] 
+    lg:px-[70px] lg:pt-[40px]
+    md:px-[50px] md:pt-[40px]
+    px-[20px] pt-[40px]
+    /* --------------Common Styles -------------- */
+    text-white;
+  }
+
+  .webDesignListItems {
+    @apply 2xl:text-[25px] 2xl:leading-[24px] 2xl:space-y-[25px]
+    xl:text-[18px] xl:leading-[21.6px] xl:space-y-[25px]
+    /* --------------Common Styles -------------- */
+    text-white font-glaCailBold;
+  }
+
+  .webDesignImgParent {
+    @apply 2xl:max-w-[45%] 2xl:max-h-[800px]
+    xl:max-w-[45%] xl:max-h-[711px]
+    lg:max-w-[45%] lg:max-h-[380px]
+    md:max-w-[53%] md:h-[350px]
+    /* --------------Common Styles -------------- */
+    object-cover;
+  }
+
+  .webListHead {
+    @apply 2xl:text-[30px] 2xl:leading-[30px] 
+  xl:text-[25px] xl:leading-[24.02px] 
+  lg:text-[22px] lg:leading-[22px] 
+  md:text-[22px] md:leading-[22px] 
+  text-[20px] leading-[20px] 
+
+    /* --------------Common Styles -------------- */
+    font-glaCailBold text-white;
+  }
+
+  .weblistItem {
+    @apply 2xl:text-[30px] 2xl:leading-[51px]   
+    xl:text-[25px] xl:leading-[38.75px]     
+    lg:text-[25px] lg:leading-[30px] 
+    md:text-[20px] md:leading-[25px]
+    text-[15px] leading-[25.5px] 
+
+
+     /* --------------Common Styles -------------- */
+     font-glacialBase text-white;
+  }
+
+  .webParaText {
+    @apply 2xl:text-[20px] 2xl:leading-[24.58px] 2xl:pb-[50px]
+    xl:text-[16px] xl:leading-[19.16px] xl:pb-[35px]
+
+       /* --------------Common Styles -------------- */
+     text-white font-glacialBase  ;
+  }
+
+  /* ----------------------------------------------------------------------------------- */
+  /* ---------------------------PortFolio Photgrphy  styles here--------------------- */
+  /* ----------------------------------------------------------------------------------- */
+
+  .PortraitImgOne {
+    @apply xl:h-[336px] xl:w-full 2xl:h-[450px] 2xl:w-full lg:h-[300px] lg:w-full md:h-[200px] md:w-full h-[220px] w-full
+
+    /* --------------Common Styles -------------- */
+    object-cover  cursor-pointer;
+  }
+
+  /* .mobileCardParent{
+    @apply 
+    max-h-[330px] w-[90%] mx-auto 
+  } */
+
+  .potraitBottomText {
+    @apply 2xl:text-[30px] 2xl:leading-[40px] 2xl:py-[40px]
+    xl:text-[30px] xl:leading-[35.97px] xl:py-[30px] 
+    lg:text-[20px] lg:leading-[25px] lg:py-[25px]
+    md:text-[20px] md:leading-[25px] md:py-[25px] 
+    text-[20px] leading-[20px] py-[20px]
+
+   /* --------------Common Styles -------------- */
+   text-center bg-[#111111];
+  }
+
+  .overlayText {
+    @apply xl:text-[25px] xl:leading-[25px] xl:py-[10px]
+
+    /* --------------Common Styles -------------- */
+    font-glacialBase cursor-pointer;
+  }
+
+  /* ======================================= Single branding pages ====================== */
+  .singleImgParent {
+    @apply xl:w-full xl:h-[100vh]
+    2xl:w-full 2xl:h-[100vh];
+  }
+  .singleBrandPara {
+    @apply 2xl:text-[30px] 2xl:leading-[51px] 2xl:pt-[30px] 
+        xl:text-[25px] xl:leading-[38.75px] xl:pt-[25px] 
+        lg:text-[25px] lg:leading-[30px] lg:pt-[25px] 
+        md:text-[20px] md:leading-[25px] md:pt-[20px] 
+        text-[15px] leading-[25.5px] pt-[20px] 
+        font-glacialBase;
+  }
+
+  .primaryTextBranding {
+    @apply 2xl:text-[30px] 2xl:leading-[30px] 2xl:mb-[40px]
+    xl:text-[30px] xl:leading-[30px] xl:mb-[35px]
+    lg:text-[25px] lg:leading-[28px] lg:mb-[25px]
+    md:text-[20px] md:leading-[25px] md:mb-[20px]
+    text-[20px] leading-[25px] mb-[20px]
+    font-glaCailBold;
+  }
+  .forntLink {
+    @apply 2xl:text-[20px] 2xl:leading-[24px] 2xl:mb-[100px]
+    xl:text-[18px] xl:leading-[20px] xl:mb-[80px]
+    lg:text-[18px] lg:leading-[20px] lg:mb-[70px]
+    md:text-[16px] md:leading-[16px] md:mb-[50px]
+    text-[15px] leading-[18px] mb-[40px]
+    font-glacialBase;
+  }
+  .SingleBrandingImg {
+    @apply xl:w-full xl:h-[604px]
+
+    /* coomon styles here */
+    grid justify-center items-center;
+  }
+
+  .projetImgOne {
+    @apply 2xl:h-[500px] xl:h-[402px] lg:h-[350px] md:h-[300px] h-[150px]
+    w-full object-cover;
+  }
+
+  .projetImgTwo {
+    @apply 2xl:h-[800px] xl:h-[602px] lg:h-[550px] md:h-[500px] h-[250px]
+    w-full object-cover;
+  }
+
+  /* ======================================= Terms and Conditions pages ====================== */
+  .termsPara {
+    @apply 2xl:text-[30px] 2xl:leading-[51px] 2xl:pb-[80px]
+    xl:text-[25px] xl:leading-[38.75px] xl:pb-[50px]
+    lg:text-[25px] lg:leading-[30px] lg:pb-[40px]
+    md:text-[20px] md:leading-[25px] md:pb-[40px]
+    text-[15px] leading-[25.5px] pb-[30px]
+
+    /* --------------Common Styles -------------- */
+    font-glacialBase;
+  }
+
+  .termsHead {
+    @apply 2xl:text-[30px] 2xl:leading-[30px]  2xl:pb-[25px]
+    xl:text-[25px] xl:leading-[24.02px]  xl:pb-[15px]
+    lg:text-[22px] lg:leading-[22px]   lg:pb-[15px]
+    md:text-[22px] md:leading-[22px]  md:pb-[10px]
+    text-[20px] leading-[20px] pb-[10px]
+    
+
+    
+    /* --------------Common Styles -------------- */
+    font-glaCailBold;
+  }
+
+  /* ============================================================================================================ */
+  /* ============================================================================================================ */
+  /* ============================================================================================================ */
+
+  /* glacial base 400 */
+  @font-face {
+    font-family: glacialBase;
+
+    src: url(../src/fonts/GlacialIndifference-Regular.otf);
+  }
+
+  /*glaCailBold 700 */
+  @font-face {
+    font-family: glaCailBold;
+    src: url(../src/fonts/GlacialIndifference-Bold.otf);
+  }
+}
